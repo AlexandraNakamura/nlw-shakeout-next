@@ -24,7 +24,7 @@ import { ChallengesContext } from "./ChallengesContext";
     export function CountdownProvider({children} : CountdownProviderProps) { 
         const { startNewChallenge } = useContext(ChallengesContext);
 
-        const [time, setTime] = useState(0.1 * 60);
+        const [time, setTime] = useState(25 * 60);
         const [isActive, setIsActive] = useState(false);
         const [hasFinished, setHasFinished] = useState(false);
     
@@ -40,7 +40,7 @@ import { ChallengesContext } from "./ChallengesContext";
             
             clearTimeout(countdownTimeout);  // poderia ser clearInterval ao invez de clearTimeout
             setIsActive(false);
-            setTime(0.1 * 60);
+            setTime(25 * 60);
             setHasFinished(false);
         }
 
